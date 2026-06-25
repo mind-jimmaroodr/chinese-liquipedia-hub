@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>专题·liquipedia 简明指南 | 中文站</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #f2f2f2;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      color: #1e1e1e;
+      line-height: 1.6;
+      padding: 2rem 1.5rem;
+    }
+
+    .container {
+      max-width: 1260px;
+      margin: 0 auto;
+    }
+
+    /* hero 横幅 */
+    .hero {
+      background: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+      padding: 2.5rem 2rem 2.8rem;
+      margin-bottom: 2rem;
+      border: 1px solid #e4e4e4;
+      transition: box-shadow 0.2s;
+    }
+
+    .hero:hover {
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.06);
+    }
+
+    .hero__label {
+      display: inline-block;
+      background: #cfd8dc;
+      color: #2c3e50;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
+      padding: 0.2rem 0.8rem;
+      border-radius: 30px;
+      margin-bottom: 0.9rem;
+    }
+
+    .hero h1 {
+      font-size: 2.2rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: #0b1a2a;
+      margin-bottom: 0.6rem;
+    }
+
+    .hero p {
+      font-size: 1.02rem;
+      color: #3f4a56;
+      max-width: 780px;
+      margin-bottom: 0.3rem;
+    }
+
+    .hero a {
+      color: #1f5c8e;
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px solid #b0c9df;
+      transition: border-color 0.15s, color 0.15s;
+    }
+
+    .hero a:hover {
+      color: #103a5a;
+      border-bottom-color: #1f5c8e;
+    }
+
+    /* 卡片网格 */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.6rem;
+      margin-bottom: 2rem;
+    }
+
+    .card {
+      background: #ffffff;
+      border: 1px solid #e6e6e6;
+      border-radius: 16px;
+      padding: 1.8rem 1.6rem 2rem;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.02);
+      transition: transform 0.15s, box-shadow 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.05);
+      border-color: #d0d0d0;
+    }
+
+    .card h2 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: #112233;
+      margin-bottom: 0.6rem;
+      letter-spacing: -0.01em;
+    }
+
+    .card p {
+      font-size: 0.925rem;
+      color: #2e3b47;
+      margin-bottom: 0.5rem;
+    }
+
+    .card .meta {
+      font-size: 0.8rem;
+      color: #7a8795;
+      margin-top: 1rem;
+      border-top: 1px dashed #dee2e6;
+      padding-top: 0.7rem;
+    }
+
+    .card a {
+      color: #1f5c8e;
+      text-decoration: none;
+      border-bottom: 1px solid #cbdae7;
+      font-weight: 450;
+    }
+
+    .card a:hover {
+      color: #0c3550;
+      border-bottom-color: #1f5c8e;
+    }
+
+    /* 底部区域 */
+    .footer-note {
+      background: #ffffff;
+      border: 1px solid #e2e2e2;
+      border-radius: 18px;
+      padding: 1.8rem 2rem;
+      margin-top: 1rem;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.01);
+    }
+
+    .footer-note p {
+      font-size: 0.98rem;
+      color: #364451;
+      margin-bottom: 0.3rem;
+    }
+
+    .footer-note a {
+      color: #1f5c8e;
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px solid #b9cee3;
+    }
+
+    .footer-note a:hover {
+      border-bottom-color: #1f5c8e;
+      color: #0b304b;
+    }
+
+    .footer-note .small {
+      font-size: 0.82rem;
+      color: #7f8b99;
+      margin-top: 0.5rem;
+      border-top: 1px solid #ececec;
+      padding-top: 0.6rem;
+    }
+
+    /* 响应式 */
+    @media (max-width: 640px) {
+      body { padding: 1.2rem 0.9rem; }
+      .hero { padding: 1.8rem 1.2rem; }
+      .hero h1 { font-size: 1.7rem; }
+      .cards { gap: 1rem; }
+      .card { padding: 1.4rem 1.2rem; }
+      .footer-note { padding: 1.2rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <!-- 横幅 hero -->
+  <div class="hero">
+    <span class="hero__label">专题·简明指南</span>
+    <h1>围绕 liquipedia 的<br>信息与访问备忘</h1>
+    <p>
+      对中文使用者而言，<a href="https://chinese-liquipedia.com">liquipedia</a> 是集电竞赛事、战队、选手数据与历史记录于一体的结构化资料库。
+      本文从几个实用层面梳理其特点、访问方式与注意事项，帮助新用户快速建立认知框架。
+    </p>
+  </div>
+
+  <!-- 三段卡片介绍 -->
+  <div class="cards">
+    <div class="card">
+      <h2>数据聚合与结构</h2>
+      <p>liquipedia 将分散的赛事信息按游戏、赛季、赛区整理成统一条目。每支战队页包含阵容变更、比赛结果及胜率统计；每名选手页列明获奖记录与成名英雄池。条目之间以超链接串连，形成可追溯的资料网络。</p>
+      <p>中文站对国内赛事（如 LPL、DPC 中国区）的收录粒度较细，包含次级联赛与升降级赛数据。</p>
+      <div class="meta">适合需要快速检索历史战绩的用户</div>
+    </div>
+
+    <div class="card">
+      <h2>编辑机制与可信度</h2>
+      <p>内容由社区志愿者维护，每次修改均留存历史版本。对于关键比赛结果，通常引用官方赛程截图或直播回放作为来源。新条目需通过简要审核，以降低误植风险。</p>
+      <p>尽管不需注册即可浏览，但编辑时建议参考站内的样式指南与引用规范，保持条目一致性。</p>
+      <div class="meta">验证型用户可善用“查看历史”功能</div>
+    </div>
+
+    <div class="card">
+      <h2>访问与语言提示</h2>
+      <p>中文站域名独立，界面及条目主体为简体中文。部分早期赛事或跨区内容仍保留英文原名，但关键术语（如“淘汰赛”“小组赛”）均已本地化。站内搜索支持中文与英文关键词，例如搜索“S13”或“全球总决赛”均可定位对应页面。</p>
+      <p>建议在浏览器中为 <a href="https://chinese-liquipedia.com">liquipedia</a> 添加书签，便于日常查询。</p>
+      <div class="meta">网络正常时可稳定访问，无登录门槛</div>
+    </div>
+  </div>
+
+  <!-- 底部访问提示 -->
+  <div class="footer-note">
+    <p><strong>访问提醒</strong> · 直接浏览 <a href="https://chinese-liquipedia.com">liquipedia</a> 无需注册或付费。若遇到页面加载异常，可尝试刷新并检查本地网络环境。对于赛事数据，建议交叉核对官方来源；liquipedia 虽尽力维护准确性，但并非第一手发布渠道。</p>
+    <p style="margin-top:0.5rem;">另外，移动端浏览器可开启“桌面版网站”模式以获得完整表格布局。站内没有弹窗广告，体验相对清爽。</p>
+    <div class="small">— 本页为独立介绍，与 liquipedia 官方无附属关系 —</div>
+  </div>
+</div>
+</body>
+</html>
